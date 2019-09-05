@@ -6,12 +6,24 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    packagesList:[]
+    packagesList: []
   },
   mutations: {
 
   },
   actions: {
-
+    postPackages: function (context, values) {
+      axios.post("http://localhost:8080/packages", {
+       number: values.number,
+        user: values.user,
+        telephone: values.telephone,
+        weight: values.weight,
+        state: 1
+      }).then(function (response) {
+        window.console.log(response);
+      }).catch(function (error) {
+        window.console.log(error);
+      });
+    }
   }
 })

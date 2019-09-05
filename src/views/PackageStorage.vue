@@ -88,7 +88,7 @@ export default {
       this.form.validateFields((err, values) => {
         this.$store.dispatch("postPackages", values);
         if (!err) {
-  window.console.log("Received values of form: ", values);
+          window.console.log("Received values of form: ", values);
         }
       });
     }
