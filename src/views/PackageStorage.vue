@@ -6,8 +6,8 @@
  <h1>包裹入库</h1>
     <a-form-item
       label="运单号"
-      :label-col="{ span:2}"
-      :wrapper-col="{ span: 3 }"
+      :label-col="{ span:10}"
+      :wrapper-col="{ span: 5 }"
     >
       <a-input
         v-decorator="[
@@ -19,8 +19,8 @@
 
  <a-form-item
       label="收件人"
-      :label-col="{ span:2}"
-      :wrapper-col="{ span: 3 }"
+      :label-col="{ span:10}"
+      :wrapper-col="{ span: 5}"
     >
       <a-input
         v-decorator="[
@@ -32,13 +32,13 @@
 
  <a-form-item
       label="电话"
-      :label-col="{ span:2}"
-      :wrapper-col="{ span: 3 }"
+      :label-col="{ span:10}"
+      :wrapper-col="{ span: 5 }"
     >
       <a-input
         v-decorator="[
           'telephone',
-          {rules: [{ required: true, message: '请输入运电话!' }]}
+          {rules: [{ required: true, message: '请输入电话!' }]}
         ]"
        
       />
@@ -46,8 +46,8 @@
 
  <a-form-item
       label="重量"
-      :label-col="{ span:2}"
-      :wrapper-col="{ span: 3 }"
+      :label-col="{ span:10}"
+      :wrapper-col="{ span: 5 }"
     >
       <a-input
         v-decorator="[
@@ -64,12 +64,12 @@
           >
             提交
           </a-button>
-          <a-button
+          <!-- <a-button
             :style="{ marginLeft: '8px' }"
             @click="handleReset"
           >
             取消
-          </a-button>
+          </a-button> -->
   </a-form>
 </template>
 
