@@ -87,9 +87,11 @@ export default {
       e.preventDefault();
       this.form.validateFields((err, values) => {
         this.$store.dispatch("postPackages", values);
+        this.$router.push("/PackageList");
         if (!err) {
           window.console.log("Received values of form: ", values);
         }
+        
       });
     }
   }
